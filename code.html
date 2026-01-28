@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Boda Ilona y Fernando - 1 de Mayo, 2026</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --burgundy: #9E1837;
+            --beige: #ECE7DB;
+            --parchment-texture: url('https://lh3.googleusercontent.com/aida-public/AB6AXuByLIRdLLksDYI7RVeP2byR5Y87mnQZfZuNv6WVevOSiAROc_efxVxpbf3q3X8G4uc-odHWpn8PeMf3UHgpFhzdsUEeQGKfD9CefVhDuY3hlhTKhdlBL5qiF7-_AilPrtR-50OoCxsYXUih8P-fBzfDslBrZyl37UMhGbFOb7SfhPbPV8V3m7vFr2pn0Msb_ioVmSn84Bp8dyF9XUCp0vVxQh6YBfOPjKm8FTsHjG-At4zS2pe2CDO50uwzORSnEeMWeXUuUpAC0tE1');
+            --hero-bg: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC98-g5V_OCvmIboCQr8k5pCEmCW8nFyXbylZutFuxjME0epETlvsuQV0MmMNzzd-NBXoLJHALrLejlQYvXE5DasIEirFsItTjE4EzgJFakOYN-xmiIXIPdI8xSsjAXkSMoIJnYPg-I7S9AJl-fxLkYKqHnNVNW_D50OZB85fDQkQFIA5B6X7GcdgCKND66oEIoqSYTZl5S30ShItgVd7Rt9W34JnfprnM3pBdTCbVMXzXHCRJAhqcp0aTALlF4oH3zygOrx073flKI');
+            --dome-sketch: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCEioQWts8xZrTt0OQZlStLe0CdneOzc84vK6KD46Skb3R0_rkJukktqKXntt7ZtLnV2gXl9zNG4Dwkw6Fd3t_MhI9KkFoaqRXpdgeMlaKFrLWTMmcWnIVJnQcVMVBvW9IR42N6QO7YYNLqkAdjBAgdHND7Xe0cF_tl8y34YLBOuKJx8DltmajjM-pFv2U5_1XlxzoKmBY6jmads1ARw-3RlPEY9nYqPKUavgp9vVeAvdSTs8-sDA1kCklEPhNqm-B4aaWPAYqF0LRq');
+            --cathedral-new: url('https://lh3.googleusercontent.com/d/18PqrlDdJIwU9I8HkKVoDLVYiqgub-45j');
+            --banquete-new: url('https://lh3.googleusercontent.com/d/1EJzMLR8efHDjVMx4uyD1cmMMroI_B82m');
+        }
+        body {
+            font-family: 'Cormorant SC', serif;
+            background-color: var(--beige);
+            color: var(--burgundy);
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: var(--parchment-texture);
+            opacity: 0.12;
+            pointer-events: none;
+            z-index: 50;
+        }
+        .text-burgundy {
+            color: var(--burgundy);
+        }
+        .bg-burgundy {
+            background-color: var(--burgundy);
+        }
+        .border-burgundy {
+            border-color: var(--burgundy);
+        }
+        .hero-section {
+            background-image: linear-gradient(rgba(236, 231, 219, 0.7), rgba(236, 231, 219, 0.7)), var(--hero-bg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .dome-overlay {
+            background-image: linear-gradient(rgba(236, 231, 219, 0.92), rgba(236, 231, 219, 0.92)), var(--dome-sketch);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        h1, h2, h3, h4, p, a, button, span, div {
+            color: var(--burgundy);
+        }
+        .btn-primary {
+            @apply border border-[#9E1837] px-8 py-3 uppercase tracking-[0.2em] transition-all duration-300 hover:bg-[#9E1837] hover:text-[#ECE7DB];
+        }
+        .btn-filled {
+            @apply bg-[#9E1837] text-[#ECE7DB] px-10 py-4 uppercase tracking-[0.3em] transition-all duration-300 hover:opacity-90 inline-block text-center border border-[#9E1837];
+        }
+        .btn-filled span, .btn-filled p, .btn-filled {
+            color: #ECE7DB !important;
+        }
+        .divider {
+            @apply flex items-center justify-center gap-4 my-8;
+        }
+        .divider::before, .divider::after {
+            content: "";
+            @apply h-[1px] w-24 bg-[#9E1837] opacity-40;
+        }
+        .countdown-box {
+            @apply border border-[#9E1837] p-6 flex flex-col items-center justify-center min-w-[120px];
+        }
+        .calendar-dropdown:hover .calendar-options {
+            display: block;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ["Cormorant SC", "serif"],
+                        serif: ["Cormorant SC", "serif"],
+                        display: ["Cormorant SC", "serif"],
+                    },
+                    colors: {
+                        burgundy: '#9E1837',
+                        beige: '#ECE7DB'
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body class="antialiased selection:bg-[#9E1837] selection:text-white">
+<header class="fixed top-0 z-[60] w-full border-b border-[#9E1837]/20 bg-[#ECE7DB]/90 backdrop-blur-sm px-6 md:px-12 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-2xl text-burgundy">history_edu</span>
+<span class="text-xl font-bold tracking-[0.3em]">I &amp; F</span>
+</div>
+<nav class="hidden md:flex gap-12">
+<a class="text-sm font-medium hover:opacity-60 transition-opacity uppercase tracking-widest" href="#ceremonia">La Ceremonia</a>
+<a class="text-sm font-medium hover:opacity-60 transition-opacity uppercase tracking-widest" href="#banquete">El Banquete</a>
+<a class="text-sm font-medium hover:opacity-60 transition-opacity uppercase tracking-widest" href="#transporte">Transporte</a>
+<a class="text-sm font-medium hover:opacity-60 transition-opacity uppercase tracking-widest" href="#regalo">Regalo</a>
+</nav>
+<a class="text-sm border-b border-[#9E1837] pb-1 hover:opacity-50 transition-all uppercase tracking-widest" href="#confirmar">Confirmar Asistencia</a>
+</div>
+</header>
+<main>
+<section class="min-h-screen flex flex-col items-center justify-center pt-24 pb-16 px-6 relative hero-section">
+<div class="text-center max-w-4xl mx-auto z-10">
+<div class="mb-12">
+<div class="inline-block border border-[#9E1837] p-4 rounded-full bg-white/20 backdrop-blur-sm">
+<div class="w-16 h-16 border border-[#9E1837] rounded-full flex items-center justify-center">
+<span class="text-2xl font-light">I &amp; F</span>
+</div>
+</div>
+</div>
+<h1 class="text-7xl md:text-9xl font-light tracking-tight mb-4 uppercase drop-shadow-sm">Ilona</h1>
+<div class="divider">
+<span class="text-3xl italic">&amp;</span>
+</div>
+<h1 class="text-7xl md:text-9xl font-light tracking-tight mb-8 uppercase drop-shadow-sm">Fernando</h1>
+<p class="text-xl md:text-2xl tracking-[0.4em] mb-12 border-y border-[#9E1837]/30 py-6 inline-block px-12 bg-white/10 backdrop-blur-sm">
+                1 DE MAYO, 2026 • BAEZA, ESPAÑA
+            </p>
+<div class="mt-8 flex flex-col md:flex-row items-center justify-center gap-6">
+<a class="btn-filled" href="#confirmar">Confirmar Asistencia</a>
+<div class="relative calendar-dropdown">
+<button class="btn-primary flex items-center gap-3">
+<span class="material-symbols-outlined text-lg">calendar_add_on</span>
+                        Añadir al Calendario
+                    </button>
+<div class="calendar-options hidden absolute top-full left-0 mt-2 w-full bg-[#ECE7DB] border border-[#9E1837] shadow-xl z-20">
+<a class="block px-6 py-4 text-sm tracking-widest uppercase hover:bg-[#9E1837] hover:text-[#ECE7DB] transition-colors border-b border-[#9E1837]/10" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Boda+Ilona+y+Fernando&amp;dates=20260501T130000Z/20260501T235959Z&amp;details=Ceremonia+en+la+Catedral+de+Baeza+y+banquete+en+Restaurante+Vandelvira.&amp;location=Catedral+de+Baeza,+Baeza,+España" target="_blank">Google Calendar</a>
+<a class="block px-6 py-4 text-sm tracking-widest uppercase hover:bg-[#9E1837] hover:text-[#ECE7DB] transition-colors" href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ADTSTART:20260501T130000Z%0ADTEND:20260501T235959Z%0ASUMMARY:Boda Ilona y Fernando%0ADESCRIPTION:Ceremonia en la Catedral de Baeza y banquete en Restaurante Vandelvira.%0ALOCATION:Catedral de Baeza, Baeza, España%0AEND:VEVENT%0AEND:VCALENDAR">Apple / iCal</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 border-y border-[#9E1837]/20 bg-white/5">
+<div class="max-w-5xl mx-auto text-center px-6">
+<h2 class="text-2xl tracking-[0.5em] mb-16 uppercase opacity-80">La Cuenta Atrás</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 justify-center" id="countdown">
+<div class="countdown-box bg-white/20 backdrop-blur-sm">
+<span class="text-4xl md:text-6xl font-light" id="days">000</span>
+<span class="text-xs tracking-[0.3em] uppercase mt-2 opacity-70 font-semibold">Días</span>
+</div>
+<div class="countdown-box bg-white/20 backdrop-blur-sm">
+<span class="text-4xl md:text-6xl font-light" id="hours">00</span>
+<span class="text-xs tracking-[0.3em] uppercase mt-2 opacity-70 font-semibold">Horas</span>
+</div>
+<div class="countdown-box bg-white/20 backdrop-blur-sm">
+<span class="text-4xl md:text-6xl font-light" id="minutes">00</span>
+<span class="text-xs tracking-[0.3em] uppercase mt-2 opacity-70 font-semibold">Minutos</span>
+</div>
+<div class="countdown-box bg-white/20 backdrop-blur-sm">
+<span class="text-4xl md:text-6xl font-light" id="seconds">00</span>
+<span class="text-xs tracking-[0.3em] uppercase mt-2 opacity-70 font-semibold">Segundos</span>
+</div>
+</div>
+<script>
+                const targetDate = new Date('May 1, 2026 13:00:00').getTime();
+                function updateCountdown() {
+                    const now = new Date().getTime();
+                    const distance = targetDate - now;
+                    if (distance < 0) {
+                        document.getElementById('countdown').innerHTML = "<p class='text-2xl uppercase tracking-widest'>¡Llegó el gran día!</p>";
+                        return;
+                    }
+                    document.getElementById('days').innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    document.getElementById('hours').innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    document.getElementById('minutes').innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    document.getElementById('seconds').innerText = Math.floor((distance % (1000 * 60)) / 1000);
+                }
+                setInterval(updateCountdown, 1000);
+                updateCountdown();
+            </script>
+</div>
+</section>
+<section class="py-32 dome-overlay px-6" id="ceremonia">
+<div class="max-w-5xl mx-auto">
+<div class="text-center mb-20">
+<h2 class="text-5xl md:text-6xl mb-6 uppercase tracking-widest font-light">La Ceremonia</h2>
+<p class="text-xl italic opacity-80">Testigos de nuestra unión en un entorno histórico</p>
+<div class="w-24 h-[1px] bg-[#9E1837] mx-auto mt-8 opacity-40"></div>
+</div>
+<div class="grid md:grid-cols-2 gap-20 items-center">
+<div class="order-2 md:order-1">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-3xl">church</span>
+<h3 class="text-3xl tracking-wide uppercase">Catedral de Baeza</h3>
+</div>
+<p class="text-lg leading-relaxed mb-8 opacity-90">
+                        La ceremonia religiosa tendrá lugar a las 13:00h. Nos encantaría que nos acompañarais en este lugar tan especial para nosotros, rodeados de la belleza renacentista de Baeza.
+                    </p>
+<div class="p-8 border border-[#9E1837] bg-white/10">
+<p class="text-sm tracking-widest mb-2 uppercase opacity-60 font-bold">Ubicación</p>
+<p class="text-lg mb-4 italic">Plaza de Santa María, Baeza</p>
+<a class="btn-primary inline-flex items-center gap-2 text-sm" href="https://maps.app.goo.gl/MogGvGndBv1uFvL56" target="_blank">
+<span class="material-symbols-outlined text-base">location_on</span>
+                            Ver Mapa
+                        </a>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<div class="aspect-[4/5] overflow-hidden border border-[#9E1837] shadow-sm">
+<img alt="Catedral de Baeza al atardecer" class="w-full h-full object-cover grayscale-[20%] sepia-[10%]" src="https://lh3.googleusercontent.com/d/18PqrlDdJIwU9I8HkKVoDLVYiqgub-45j"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 px-6" id="banquete">
+<div class="max-w-5xl mx-auto">
+<div class="grid md:grid-cols-2 gap-20 items-center">
+<div>
+<div class="aspect-[4/5] overflow-hidden border border-[#9E1837] shadow-sm">
+<img alt="Banquete Vandelvira - Patio de piedra" class="w-full h-full object-cover grayscale-[20%] sepia-[10%]" src="https://lh3.googleusercontent.com/d/1EJzMLR8efHDjVMx4uyD1cmMMroI_B82m"/>
+</div>
+</div>
+<div>
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-3xl">restaurant</span>
+<h3 class="text-3xl tracking-wide uppercase">Restaurante Vandelvira</h3>
+</div>
+<p class="text-lg leading-relaxed mb-8 opacity-90">
+                        Tras el "sí quiero", celebraremos nuestra unión con un almuerzo y una gran fiesta. Disfrutaremos de la gastronomía local en un ambiente único y lleno de historia.
+                    </p>
+<div class="p-8 border border-[#9E1837] bg-white/10">
+<p class="text-sm tracking-widest mb-2 uppercase opacity-60 font-bold">Dirección</p>
+<p class="text-lg mb-4 italic">Plaza de San Francisco, Baeza</p>
+<a class="btn-primary inline-flex items-center gap-2 text-sm" href="https://maps.app.goo.gl/qJp4XG8q9f6ZfXvK6" target="_blank">
+<span class="material-symbols-outlined text-base">explore</span>
+                            Cómo llegar
+                        </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 bg-[#9E1837]/5 px-6 border-y border-[#9E1837]/20" id="transporte">
+<div class="max-w-4xl mx-auto text-center">
+<span class="material-symbols-outlined text-5xl mb-8 opacity-80">directions_bus</span>
+<h2 class="text-4xl md:text-5xl mb-8 uppercase tracking-widest font-light">Transporte de Invitados</h2>
+<p class="text-xl mb-16 italic opacity-80 max-w-2xl mx-auto">Para vuestra comodidad, facilitaremos un servicio de transporte para los traslados durante el evento.</p>
+<div class="max-w-md mx-auto">
+<div class="border border-[#9E1837] p-12 flex flex-col items-center bg-white/10 backdrop-blur-sm">
+<span class="material-symbols-outlined text-3xl mb-4">location_on</span>
+<p class="text-2xl tracking-widest uppercase mb-2">Punto de Salida</p>
+<p class="text-xl italic opacity-90">La salida será desde Linares</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 px-6" id="regalo">
+<div class="max-w-3xl mx-auto text-center">
+<span class="material-symbols-outlined text-5xl mb-8 opacity-80">redeem</span>
+<h2 class="text-4xl md:text-5xl mb-10 uppercase tracking-widest font-light">Regalo</h2>
+<p class="text-xl mb-12 italic opacity-80 leading-relaxed">
+                Vuestra presencia es nuestro mejor regalo. No obstante, si deseáis tener un detalle con nosotros para nuestra nueva etapa juntos, os lo agradeceremos de corazón.
+            </p>
+<div class="relative py-12 px-8 border border-[#9E1837] bg-white/5 overflow-hidden">
+<div class="absolute -top-10 -right-10 opacity-5">
+<span class="material-symbols-outlined text-[15rem]">account_balance</span>
+</div>
+<p class="text-sm tracking-[0.5em] uppercase opacity-70 font-bold mb-6">Datos Bancarios</p>
+<p class="text-2xl md:text-3xl font-light tracking-[0.1em] mb-4">ES67 1583 0001 1591 7525 4529</p>
+<p class="text-xl mb-10 italic">Titulares: Ilona &amp; Fernando</p>
+<button class="btn-filled flex items-center justify-center gap-3 mx-auto">
+<span class="material-symbols-outlined text-lg">content_copy</span>
+<span>Copiar Información</span>
+</button>
+</div>
+</div>
+</section>
+<section class="py-32 px-6 bg-[#9E1837]/5" id="confirmar">
+<div class="max-w-4xl mx-auto text-center">
+<div class="divider mb-16">
+<span class="material-symbols-outlined text-4xl">favorite</span>
+</div>
+<h2 class="text-5xl md:text-7xl mb-8 uppercase tracking-[0.1em] font-light">¿Nos acompañáis?</h2>
+<p class="text-xl md:text-2xl mb-16 italic opacity-80 leading-relaxed">
+                Por favor, confirmad vuestra asistencia antes del 1 de marzo de 2026. <br/>
+                Estamos deseando compartir este día tan especial con vosotros.
+            </p>
+<div class="flex flex-col md:flex-row items-center justify-center gap-8">
+<a class="btn-filled w-full md:w-auto" href="#confirmar">Confirmar RSVP</a>
+<a class="btn-primary w-full md:w-auto" href="mailto:leporacejimenezfernando@gmail.com">Contactar</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="py-20 px-6 border-t border-[#9E1837]/20 text-center bg-white/5">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col items-center mb-12">
+<div class="w-12 h-12 border border-[#9E1837] rounded-full flex items-center justify-center mb-6">
+<span class="text-sm">I&amp;F</span>
+</div>
+<h3 class="text-2xl tracking-[0.5em] uppercase font-light">Ilona &amp; Fernando</h3>
+</div>
+<div class="grid md:grid-cols-2 gap-12 max-w-2xl mx-auto mb-16">
+<div>
+<p class="text-[10px] tracking-[0.4em] uppercase font-bold opacity-50 mb-4">Correo de la Boda</p>
+<p class="text-lg">leporacejimenezfernando@gmail.com</p>
+</div>
+<div>
+<p class="text-[10px] tracking-[0.4em] uppercase font-bold opacity-50 mb-4">Teléfonos de Contacto</p>
+<p class="text-lg">Fernando: 639 159 723</p>
+<p class="text-lg">Ilona: 601 003 087</p>
+</div>
+</div>
+<div class="opacity-50 text-[10px] tracking-[0.3em] uppercase pt-10 border-t border-[#9E1837]/10">
+<p>© 2026 Ilona &amp; Fernando • Una unión de historia y amor</p>
+</div>
+</div>
+</footer>
+
+</body></html>
