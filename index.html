@@ -300,10 +300,13 @@
 <p class="text-sm tracking-[0.5em] uppercase opacity-70 font-bold mb-6">Datos Bancarios</p>
 <p class="text-2xl md:text-3xl font-light tracking-[0.1em] mb-4">ES67 1583 0001 1591 7525 4529</p>
 <p class="text-xl mb-10 italic">Titulares: Ilona &amp; Fernando</p>
-<button class="btn-filled flex items-center justify-center gap-3 mx-auto">
+
+<!-- ✅ BOTÓN MODIFICADO: se añade id -->
+<button class="btn-filled flex items-center justify-center gap-3 mx-auto" id="copyAccount">
 <span class="material-symbols-outlined text-lg">content_copy</span>
 <span>Copiar Información</span>
 </button>
+
 </div>
 </div>
 </section>
@@ -356,5 +359,17 @@
 </div>
 </footer>
 
-</body></html>
+<!-- ✅ SCRIPT AÑADIDO: copiar IBAN al portapapeles -->
+<script>
+  document.getElementById('copyAccount').addEventListener('click', function () {
+    const accountNumber = 'ES67 1583 0001 1591 7525 4529';
 
+    navigator.clipboard.writeText(accountNumber).then(() => {
+      alert('Número de cuenta copiado al portapapeles');
+    }).catch(err => {
+      console.error('Error al copiar:', err);
+    });
+  });
+</script>
+
+</body></html>
